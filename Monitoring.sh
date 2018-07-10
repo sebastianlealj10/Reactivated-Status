@@ -4,7 +4,6 @@ mv new.html old.html 2> /dev/null
 curl $URL -L --compressed -s > new.html
 for (( ; ; )); 
 do
-    mv new.html old.html 2> /dev/null
     curl $URL -L --compressed -s > new.html
     A_len=$(cat new.html | wc -l)
     echo $A_len
