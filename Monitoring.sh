@@ -1,6 +1,5 @@
 #!/bin/bash
-
-URL="https://welcome.sirus.su/#/page-8"
+URL="http://localhost/Phishingtest.html"
 mv new.html old.html 2> /dev/null
 curl $URL -L --compressed -s > new.html
 for (( ; ; )); 
