@@ -1,6 +1,11 @@
 #!/bin/bash
+<<<<<<< HEAD
 
 URL="http://localhost/Phishingtest.html"
+=======
+URL="http://localhost/Phishingtest.html"
+mv new.html old.html 2> /dev/null
+>>>>>>> 5adbabd9169fa6c9b181d62f67a26a60c1faab6a
 curl $URL -L --compressed -s > new.html
 mv new.html old.html 2> /dev/null
 B_len=$(cat old.html | wc -l)
