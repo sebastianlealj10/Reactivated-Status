@@ -23,6 +23,5 @@ do
     if [[ $percentage -gt 40 ]]; then
       echo 'Posible Reactivacion!!'
     fi
-    
     sleep 10
 done
