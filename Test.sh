@@ -1,3 +1,5 @@
 #!/bin/bash
-DIFF_OUTPUT="$(diff new.html old.html)"
-comm -13 $DIFF_OUTPUT
+if [ ! -f "HTMLS/localtest1.html" ]
+  then
+    echo "entrando"
+fi
