@@ -1,847 +1,184 @@
-
 <!DOCTYPE html>
-<!--[if IE 8 ]> <html lang="es" dir="ltr" class="no-js ie8 lt-ie9 oldie"> <![endif]-->
-<!--[if IE 9 ]> <html lang="es" dir="ltr" class="no-js ie9"> <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="es" dir="ltr"> <!--<![endif]-->
+<!-- saved from url=(0039)http://www.cr.mufg.jp/select/login.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- META -->
+	
+	<title>お持ちのカードブランドをご選択ください（ログイン）｜クレジットカードなら三菱UFJニコス</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="クレジットカード,Visa,MasterCard,JCB,アメリカン・エキスプレス,MUFG,DC,NICOS,JA,UFJJCB">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="robots" content="INDEX,FOLLOW">
+		<meta name="author" content="三菱UFJニコス株式会社">
+	<meta name="copyright" content="Mitsubishi UFJ NICOS Co.,Ltd.">
+	<!-- InstanceParam name="brand" type="text" value="" -->
+	<!-- InstanceParam name="tsvignore" type="text" value="1" -->
+	<meta name="viewport" content="device-width, user-scalable=no, initial-scale=1 minimum-scale=0.1, maximum-scale=4">
+	<!-- CSS -->
+	<link rel="stylesheet" href="./login_main_files/reset.css" media="all" type="text/css">
+	<link rel="stylesheet" href="./login_main_files/cmpSPLayout.css" media="screen" type="text/css">
+	
+	<link rel="stylesheet" href="./login_main_files/cmpPCLayout.css" media="print, all and  (min-width: 640px)" type="text/css"><link rel="stylesheet" href="./login_main_files/mptSPLayout.css" media="screen" type="text/css">
+	<link rel="stylesheet" href="./login_main_files/mptPCLayout.css" media="print, all and  (min-width: 640px)" type="text/css">
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/cmn/css/ie8ud.css" media="all" type="text/css">
+	<![endif]-->
+	<link rel="stylesheet" href="./login_main_files/jquery.mCustomScrollbar.css" media="all" type="text/css">
+	<link rel="stylesheet" href="./login_main_files/print.css" media="print" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="/cmn/js/html5shiv.js"></script>
+	<![endif]-->
+	<script async="" src="./login_main_files/saved_resource"></script><script src="./login_main_files/jquery-1.11.2.min.js.download"></script>
+	<!--[if lt IE 9]>
+		<script src="/cmn/js/selectivizr-min.js"></script>
+	<![endif]-->
+	<script src="./login_main_files/jquery.mCustomScrollbar.concat.min.js.download"></script>
+	<script src="./login_main_files/baseCmpLib_new.js.download"></script>
+	<script src="./login_main_files/select.js.download"></script>
+	
+	<script src="./login_main_files/appBnr1.js.download"></script><meta name="apple-itunes-app" content="app-id=886511894">
+<script type="text/javascript" src="./login_main_files/f.txt"></script><script src="./login_main_files/f(1).txt"></script><script src="./login_main_files/f(2).txt"></script></head>
+<body id="select">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-    <meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cómo leer un archivo línea por línea</title>
-    <script type="text/javascript">$ccmprms={"user":{"connected":false,"nick":"","fbid":null,"has_oas":true},"app":{"locale":"es_ES","site_url":"es.ccm.net","main_cat":"parallaxeinfeed","is_portable":false},"facebook":{"enabled":true,"appid":"435861839950921","url":"https:\/\/www.facebook.com\/es.ccm.net","autologin":true,"scope":"email,user_birthday,publish_actions,user_website"}}</script><meta http-equiv="Content-Language" content="es" />
-<meta name="theme-color" content="#d51827" />
-<meta name="msapplication-TileColor" content="#d51827" />
-<meta name="msapplication-TileImage" content="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/mstile-144x144.png" />
-<meta name="msapplication-config" content="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/browserconfig.xml" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="Uno de los errores m&aacute;s comunes cuando se aprende a utilizar los scripts &ldquo;bash&rdquo; bajo GNU/Linux para leer un archivo l&iacute;nea por l&iacute;nea, es el utilizar un bucle &ldquo;for&rdquo;, (for line in $(cat file.txt); do ...) lo que conduce a una evaluaci&oacute;n de cada palabra y..." />
-<meta property="og:title" content="Cómo leer un archivo línea por línea" />
-<meta property="og:url" content="https://es.ccm.net/faq/893-como-leer-un-archivo-linea-por-linea" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Cómo leer un archivo línea por línea" />
-<meta name="twitter:description" content="Uno de los errores m&aacute;s comunes cuando se aprende a utilizar los scripts &ldquo;bash&rdquo; bajo GNU/Linux para leer un archivo l&iacute;nea por l&iacute;nea, es el utilizar un bucle &ldquo;for&rdquo;, (for line in $(cat file.txt); do ...) lo que conduce a una evaluaci&oacute;n de cada palabra y..." />
-<meta name="twitter:site" content="ccm_es" />
-<meta name="referrer" content="always" />
-<meta name="description" content="Uno de los errores m&aacute;s comunes cuando se aprende a utilizar los scripts &ldquo;bash&rdquo; bajo GNU/Linux para leer un archivo l&iacute;nea por l&iacute;nea, es el utilizar un bucle &ldquo;for&rdquo;, (for line in $(cat file.txt); do ...) lo que conduce a una evaluaci&oacute;n de cada palabra y..." />
-<meta property="og:site_name" content="CCM" />
-<meta property="fb:admins" content="392815744108612" />
-<meta name="googlebot" content="snippet,archive" />
-<meta property="atm" content="aHR0cDovL2VzLmNjbS5uZXQvZmFxLzg5My1jb21vLWxlZXItdW4tYXJjaGl2by1saW5lYS1wb3ItbGluZWE=" /><script>
-    var dataLayer = [{"appConfig":{"subContainers":["GTM-T5N2HW4"],"ua":"UA-6560367-3"},"site":"es.ccm.net","environnement":"production","pageType\/screenType":"classique","sessionType":"nonConnectee","userStatus":"Anonyme","idArticle":"893","author":"Carlos-vialfa","level1":"Trucos","level2":"Sistemas Operativos","level3":"Linux","application":"faq","pageCategory":"article","theme":"Bash"}];
+	<div id="allMainWrap" class="oneCLM">
 
-            !function(e){"use strict";var t=function(){},n=function(){return{log:t,error:t,warn:t,info:t,group:t,groupEnd:t,time:t,timeEnd:t}},o=e.console;if("object"==typeof e.JSON&&"function"==typeof e.JSON.parse&&"object"==typeof e.console&&"function"==typeof Object.keys){var r=!/Edge|Trident/.test(navigator.userAgent),a={available:["others.catch","others.show"],broadcasted:[]},i=function(){var e=9,t=242,n=220,o=/^\s+(.*)\s+$/g,r=function(e){e=e.replace(o,"$1");for(var t=[0,0,0],n=0,r=0;n<e.length;n++)r=parseInt(n/t.length),t[n%3]+=parseInt(s(e[n])/i(r));for(n=0;n<t.length;n++)t[n]>255&&(t[n]=255);return t},a=function(e){return"rgb("+e.join(",")+")"},i=function(t){return Math.pow(e,t)},s=function(n){return parseInt((n.charCodeAt()<<e)%t)};return{get:r,toRGB:a,visible:function(e){return e[0]>n||e[1]>n||e[2]>n?[0,0,0]:[255,255,255]}}}(),s=function(e,t,n,a){return o[t]?function(){var i=Array.prototype.slice.call(arguments);r&&i.unshift("background-color:"+a+";color:"+n+";border-radius:2px;"),i.unshift((r?"%c":"")+[" ",e," "].join("")),o[t].apply(console,i)}:function(){}},c=function(){try{var e=localStorage.getItem("getConsole");e=null===e?[]:JSON.parse(e)}catch(t){e=[]}return e},u=function(e){a.available.push(e);var t=document.createEvent("CustomEvent");t.initCustomEvent("getConsole.tag.available",!1,!1,e),document.dispatchEvent(t)};e.getConsole=function(e){if("string"!=typeof e)throw"getConsole need a tag name (string)";if(-1===a.available.indexOf(e)&&u(e),-1!==a.broadcasted.indexOf(e)){var t=i.get(e),r=i.toRGB(i.visible(t)),c=i.toRGB(t),d={log:s(e,"log",r,c),warn:s(e,"warn",r,c),error:s(e,"error",r,c),info:s(e,"info",r,c)};return Object.keys(o).forEach(function(e){"undefined"==typeof d[e]&&(d[e]=o[e])}),d}return n()},e.getConsole.tags=a,a.broadcasted=c(),-1!==a.broadcasted.indexOf("others.catch")&&(e.console=e.getConsole("others.show"))}else e.getConsole=n}(window),_logmatic=[],logmatic={log:function(){"use strict";_logmatic.push(Array.prototype.slice.call(arguments))}},function(e){"use strict";var t={domains:["hpphmfubhnbobhfs","bnb{po.betztufn","beoyt","epvcmfdmjdl","hpphmftzoejdbujpo","wjefptufq","s77ofu","ufbet","vosvmznfejb","tnbsubetfswfs","tljnsftpvsdft","{fcftupg","uumce","hpphmfbqjt","wjefpqmb{b","hpphmfbetfswjdft","fggfdujwfnfbtvsf","pvucsbjo","ubcppmb"],classes:"ufyuBe!BeCpy!qvc`411y361!qvc`411y361n!qvc`839y:1!ufyu.be!ufyuBe!Mjhbuvt!ufyu`be!ufyu`bet!ufyu.bet!ufyu.be.mjolt",event:{category:"pbt`mpbefe",action:"gbjm"}},n=e.getConsole("inObs"),o=function(e){if("undefined"==typeof MutationObserver)return void e.call(!1,!1);var o=document.getElementsByTagName("html")[0],a={childList:!0,attributes:!0,characterData:!0,subtree:!0},i=!1,s=new MutationObserver(function(o){o.forEach(function(o){try{var a,c="",u=new Date,d=function(){};"childList"===o.type&&o.addedNodes.length&&(a=o.addedNodes[0],"undefined"!=typeof a.src&&(c=a.nodeName,"SCRIPT"===c||"IFRAME"===c))&&(d=o.addedNodes[0].onerror,o.addedNodes[0].onerror=function(){n.warn("Missing script",a.src),!i&&-1!==t.domains.indexOf(r(new URL(a.src).host.split(/\./).slice(-2).shift()))&&(new Date).getTime()-u.getTime()<1500&&(n.warn("Integrity violation on ",a.src," not observing anymore !"),s.disconnect(),i=!0,e(!0)),"function"==typeof d&&d.apply(this,Array.prototype.slice.call(arguments))})}catch(f){n.error(f)}})});s.observe(o,a)},r=function(e,t){return t=t||1,e.split("").map(function(e){return String.fromCharCode(e.charCodeAt()+t)}).join("")},a=function(e){if("undefined"==typeof MutationObserver)return void e.call(!1,!1);var o=document.createElement("div"),a=document.getElementsByTagName("html")[0],i={},s={childList:!0,attributes:!0,characterData:!0,subtree:!0},c=!1,u=new MutationObserver(function(t){t.forEach(function(t){"style"===t.attributeName&&(u.disconnect(),"none"===t.target.style.display&&!e.called&&(e.called=!0)&&e.call(i,!0))})}),d=new MutationObserver(function(t){t.forEach(function(t){try{if("childList"===t.type&&"HTML"===t.target.nodeName&&t.addedNodes.length&&"BODY"===t.addedNodes[0].nodeName&&!c){c=!0,t.addedNodes[0].appendChild(o);var r=getComputedStyle(o);if(i=t.addedNodes[0],d.disconnect(),/Trident/.test(navigator.userAgent))return void setTimeout(function(){!e.called&&(e.called=!0)&&e.call(i,!1)},50);setTimeout(function(){t.addedNodes[0].removeChild(o)},60),u.disconnect(),e.call(t.addedNodes[0],"none"===r.getPropertyValue("display")||/url\("about:abp/.test(r.getPropertyValue("-moz-binding")))}}catch(a){n.error(a)}})});o.className=r(t.classes,-1),o.style.display="block",d.observe(a,s),u.observe(o,s)},i=[];e.integrityObserver={state:{network:null,dom:null},corrupted:!1,listen:function(e){this.corrupted?e(this.state):i.push(e)},sendToListeners:function(){i.forEach(function(e){e(this.state)}.bind(this))},reportCorruption:function(){var e=function(){"undefined"!=typeof ga?ga("send",{hitType:"event",eventCategory:r(t.event.category,-1),eventAction:r(t.event.action,-1),nonInteraction:!0}):setTimeout(e,100)};e()},reportChange:function(){this.sendToListeners(),this.reportCorruption()},init:function(){var e=function(e){return function(t){this.state[e]=t,t&&(!this.corrupted&&this.reportChange(),this.corrupted=!0)}.bind(this)};a(e.call(this,"dom")),o(e.call(this,"net"))}},"function"==typeof Object.bind&&e.integrityObserver.init()}(window),function(e,t,n,o,r){"use strict";"undefined"==typeof e._gtm&&(e._gtm={events:{on:[],ready:[],readyAll:[]},versions:{}}),"undefined"==typeof e._gtm.versions&&(e._gtm.versions={}),e._gtm.versions.staticheader=1,e._gtm.state="loading";var a=dataLayer[0].appConfig,i=[r],s=a.subContainers||[],c=e.getConsole("GTM").log,u=function(e){if("undefined"!=typeof t.dispatchEvent){var n=null;"function"==typeof Event?n=new Event(e):(n=t.createEvent("Event"),n.initEvent(e,!1,!1)),t.dispatchEvent(n)}},d=function(){d.state++,d.state===i.length&&(e._gtm.state="loaded",u("gtm.loaded"))},f=function(){e._gtm.state="error",u("gtm.error")};d.state=0,i=i.concat(s),c("Loading sub containers:",s);for(var l=0,g=i.length;g>l;++l){e[o]=e[o]||[],e[o].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var p=t.getElementsByTagName(n)[0],m=t.createElement(n),h="dataLayer"!==o?"&l="+o:"";m.async=!0,m.onload=d,m.onerror=f,m.src="https://www.googletagmanager.com/gtm.js?id="+i[l]+h,p.parentNode.insertBefore(m,p)}}(window,document,"script","dataLayer","GTM-N4SNZN"),OAS_AD_BUFFER=[],OAS_AD=function(){OAS_AD_BUFFER.push(Array.prototype.slice.call(arguments))},function(e){"use strict";e._gtm=e._gtm||{},e._gtm.errors=[],window.addEventListener("error",function(t){null!==t.error&&e._gtm.errors.push({message:t.error.message,stack:t.error.stack,name:t.error.name,filename:t.filename,line:t.lineno,column:t.colno})})}(window);    
+				<header id="cmnNaviHeader" role="banner">
+			<div id="headerInnerWrap" class="munLogo2016_05">
+				<div id="headerLogoSP">
+					<img src="./login_main_files/logoMUFG_ttl_006.png" alt="MUFG" class="pc">
+					<img src="./login_main_files/logoMUFG_ttl_007.png" alt="MUFG 三菱UFJニコス" class="sp">
+				</div>
+				<div id="corpLogo">
+					<img src="./login_main_files/logo_corp_03.gif" alt="三菱UFJニコス">
+				</div>
+				<p class="jsBraBtnBack headerBackBtn spDisplay disabled"><a class="disabled">戻る</a></p>
+			</div>
 
-    dataLayer.push({event: "app.config", appConfig :{asl : {screens: {"mobile":{"max":480,"invcode":"mobile","client":"dfp"},"tablet":{"min":480,"max":1024,"invcode":"tablet","client":"dfp"},"desktop":{"min":1024,"invcode":"desktop","client":"dfp"}},positions: {"Top":{"insve":false,"mapping":{"tablet":{"size":[[728,90]],"fullName":"TopBanner"},"desktop":{"size":[[1000,250],[1000,90],[728,90]],"fullName":"TopBanner"}}},"Top1":{"insve":false,"mapping":[]},"Right":{"insve":false,"mapping":{"mobile":{"size":[[300,600]],"fullName":"TopRight"},"tablet":{"size":[[300,600],[300,250]],"fullName":"TopRight"},"desktop":{"size":[[300,600],[300,900],[300,250],[300,1050]],"fullName":"TopRight"}}},"Position1":{"insve":false,"mapping":[]},"Position2":{"insve":false,"mapping":{"mobile":{"size":[[300,600],[300,250]],"fullName":"BottomRight"},"tablet":{"size":[[300,600],[300,250]],"fullName":"BottomRight"},"desktop":{"size":[[300,600],[300,250]],"fullName":"BottomRight"}}},"Position3":{"insve":false,"mapping":[]},"Position4":{"insve":false,"mapping":[]},"x01":{"insve":false,"mapping":[]},"x02":{"insve":false,"mapping":{"mobile":{"size":[[1,1]],"fullName":"BackgroundSkin"},"tablet":{"size":[[1,1],[1024,768]],"fullName":"BackgroundSkin"},"desktop":{"size":[[1,1],[1024,768]],"fullName":"BackgroundSkin"}}},"TopLeft":{"insve":true,"mapping":{"mobile":{"size":[[1,1]],"fullName":"Overlay"},"tablet":{"size":[[1,1],[1024,768]],"fullName":"Overlay"},"desktop":{"size":[[1,1],[1024,768]],"fullName":"Overlay"}}},"Infeed":{"insve":false,"mapping":{"mobile":{"size":[[320,50]],"fullName":"TopBanner"}}},"Middle":{"insve":false,"mapping":[]},"Intext":{"insve":false,"mapping":{"mobile":{"size":[[640,360]],"fullName":"BodyInText"},"tablet":{"size":[[640,360]],"fullName":"BodyInText"},"desktop":{"size":[[640,360],[640,1]],"fullName":"BodyInText"}}}},clients: {"dfp":{"clientId":"62615953\/CCM_LATAM","lang":"es","theme":"hightech","loaded":2}},sitepage: 'es_kioskea_hightech/faq',keywords: ["parallaxeinfeed","sistemas-operativos","linux","shell","bash","faq-893","Faq"]}}});
+		</header><!--/#cmnNaviHeader-->
+
+
+		<main id="main" role="main">
+
+			<noscript>
+							<div class="noScriptMsg"><p>現在お客さまの環境ではJavaScriptが無効になっています。JavaScriptを有効にしたうえで、ページをご覧ください。<br>※このページはJavaScriptを利用しています。</p></div>
+
+			</noscript>
+
+			<div id="contents">
+				<div class="articleType01">
+					<h1 class="braSelectHead01">お持ちのカードブランドをご選択ください。</h1>
+					<div class="braSelectBlock">
+						<div class="sectionType01">
+							<div class="columnBoxWrap introducingByIcon nonHSet" style="visibility: visible;">
+								<div class="columnBox">
+									<a href="login_pc.php?cardBrand=news_mufg">
+										<img src="./login_main_files/select_logo_001.gif" alt="MUFGカード（UFJカード含む）" class="pcOnly">
+										<img src="./login_main_files/sp_select_logo_001.gif" alt="MUFGカード（UFJカード含む）" class="spOnly">
+									</a>
+								</div>
+								<div class="columnBox">
+									<a href="login_pc.php?cardBrand=news_dc">
+										<img src="./login_main_files/select_logo_002.gif" alt="DCカード" class="pcOnly">
+										<img src="./login_main_files/sp_select_logo_002.gif" alt="DCカード" class="spOnly">
+									</a>
+								</div>
+								<div class="columnBox">
+									<a href="login_pc.php?cardBrand=news_nicos">
+										<img src="./login_main_files/select_logo_003.gif" alt="NICOSカード" class="pcOnly">
+										<img src="./login_main_files/sp_select_logo_003.gif" alt="NICOSカード" class="spOnly">
+									</a>
+								</div>
+							</div>
+							<div class="columnBoxWrap bottom introducingByIcon nonHSet" style="visibility: visible;">
+								<div class="columnBox">
+									<a href="login_pc.php?cardBrand=news_amex">
+										<img src="./login_main_files/select_logo_004.gif" alt="MUFGカード・アメリカン・エキスプレス®・カード" class="pcOnly">
+										<img src="./login_main_files/sp_select_logo_004.gif" alt="MUFGカード・アメリカン・エキスプレス®・カード" class="spOnly">
+									</a>
+								</div>
+								<div class="columnBox">
+									<a href="login_pc.php?cardBrand=news_ja">
+										<img src="./login_main_files/select_logo_005.gif" alt="JAカード（NICOSカード）" class="pcOnly">
+										<img src="./login_main_files/sp_select_logo_005.gif" alt="JAカード（NICOSカード）" class="spOnly">
+									</a>
+								</div>
+							</div>
+							<div class="braSelectTextBlock01">
+								<p class="braSelectText01">カード番号が<span class="textTypeBold">「354」</span>または<span class="textTypeBold">「355」</span>ではじまる<span class="textTypeBold">JCBカード会員の方</span></p>
+								<p class="linkType02"><a class="btn btn-primary btn-lg mainTextType02" data-toggle="modal" data-target="#bumperModal" data-bumpertext="JCBの会員専用WEBサービス「MyJCB」" href="https://my.jcb.co.jp/Login">UFJ JCBカード<span class="iconTypeBlank"><img src="./login_main_files/cmn_ico_003.png" alt="新しいタブやウィンドウで開く"></span></a></p>
+							</div>
+						</div>
+						<div class="sectionType01 fullWidth">
+							<div class="braSelectDetailBlock">
+								<p class="braSelectDetailText">カード表面、裏面のどちらかに表示しています。</p>
+								<div class="braSelectDetailImage"><img src="./login_main_files/select_card_001.gif" alt="表面 裏面"></div>
+							</div>
+						</div>
+					</div>
+					<p class="jsBraBtnBack grayBtn04 braBtnBack"><a class="disabled">戻る</a></p>
+				</div><!--.articleType01-->
+			</div><!--/#contents-->
+
+
+		</main><!--/#main-->
+
+
+		<footer id="mainFooter" role="contentinfo" class="nonViewSWBtn">
+
+			
+			<p class="linkType_viewSWBtn" style="display: none;"><a href="http://www.cr.mufg.jp/select/login.html" class="viewSWBtnPC">PC版</a><a href="http://www.cr.mufg.jp/select/login.html" class="viewSWBtnSP act">スマートフォン版</a></p>
+			<p id="copyright"><small>Copyright (C) 2018 Mitsubishi UFJ NICOS Co.,Ltd. All Rights Reserved.</small></p>
+			<div id="returnTopSP" class="returnTopBtn" style="display: none;"><a href="http://www.cr.mufg.jp/select/login.html"><img src="./login_main_files/footer_btn_001.png" alt="このページの先頭に戻る"></a></div>
+
+		</footer>
+		<!--[if lt IE 9]>
+		<script src="/cmn/js/respond.min.js"></script>
+		<![endif]-->
+	</div>
+
+	<!--AA vars-->
+<script language="JavaScript">
+var _sc = _sc || {};
 </script>
-<link rel="manifest" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/manifest.json" />
-<link rel="mask-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/safari-pinned-tab.svg" color="#d51827" />
-<link rel="icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/favicon-32x32.png" sizes="32x32" type="image/png" />
-<link rel="icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/favicon-16x16.png" sizes="16x16" type="image/png" />
-<link rel="icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/android-chrome-192x192.png" sizes="192x192" type="image/png" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-57x57.png" sizes="57x57" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-60x60.png" sizes="60x60" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-72x72.png" sizes="72x72" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-76x76.png" sizes="76x76" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-114x114.png" sizes="114x114" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-120x120.png" sizes="120x120" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-144x144.png" sizes="144x144" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-152x152.png" sizes="152x152" />
-<link rel="apple-touch-icon" href="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/favicon/apple-touch-icon-180x180.png" sizes="180x180" />
-<link rel="canonical" href="https://es.ccm.net/faq/893-como-leer-un-archivo-linea-por-linea" />
-<link rel="alternate" href="https://ccm.net/faq/1757-how-to-read-a-linux-file-line-by-line" hreflang="en" />
-<link rel="alternate" href="https://es.ccm.net/faq/893-como-leer-un-archivo-linea-por-linea" hreflang="es" />
-<link rel="alternate" href="https://www.commentcamarche.com/faq/5027-comment-lire-un-fichier-ligne-par-ligne" hreflang="fr" />
-<link rel="alternate" href="https://br.ccm.net/faq/2269-como-ler-um-arquivo-linha-por-linha" hreflang="pt" />
-<link rel="alternate" href="https://in.ccm.net/faq/178-linux-unix-bash-read-a-file-line-by-line" hreflang="hi" />
-<link rel="alternate" href="https://id.ccm.net/faq/1108-cara-membaca-file-linux-dari-baris-per-baris" hreflang="id" />
-<link href="https://es.ccm.net/rss/" rel="alternate" title="Actualidades" type="application/rss+xml" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-<script src="https://astatic.ccmbg.com/www.commentcamarche.net/js/main?v=20180604114612" type="text/javascript"></script><link href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed" rel="stylesheet" type="text/css" media="screen" />
-<link href="https://astatic.ccmbg.com/fc/css/componentsLight?v=20180413105628" rel="stylesheet" type="text/css" media="screen" />
-<link href="https://astatic.ccmbg.com/fc/css/ckeditor-outer?v=20171024172724" rel="stylesheet" type="text/css" media="screen" />
-<link href="https://astatic.ccmbg.com/es.ccm.net/css/main?v=20180604165313" rel="stylesheet" type="text/css" media="all" /><!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
+<!--/AA vars-->
 
-<body class="   ">
-        <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-        <symbol id="ccm_avatar">
-            <path fill="currentColor" d="M36.2 39.6s-.2 0-.5.2c-.1-.9-.3-3.4-.4-4 .3-.3.7-.8 1-1.2s1.1-3.1 1.3-4.3c.1 0 .5.3.8.1.3-.2.6-1.1.9-1.7.2-.5.7-2.4.8-3.1.1-.7.4-1.7.1-2-.2-.2-.6-.7-1.5-.3.2-1.4.2-5.6-.2-8.2-.4-2.6-2.1-4.2-3.9-5.9-1.8-1.7-5.3-2.4-7-2.4-1.7 0-5.2.7-7 2.4-1.8 1.7-3.5 3.2-3.9 5.9-.4 2.6-.4 6.8-.2 8.2-.9-.4-1.3.1-1.5.3-.3.3 0 1.3.1 2s.6 2.6.8 3.1c.2.6.5 1.5.9 1.7.3.2.7-.1.8-.1.2 1.2 1.1 3.9 1.3 4.3.3.4.7.9 1 1.2-.1.6-.2 3.1-.4 4-.3-.2-.5-.2-.5-.2S8.1 43.7 6.2 45c5 6.1 12.7 10 21.3 10s16.2-3.9 21.3-10c-1.9-1.3-12.6-5.4-12.6-5.4z"/>
-        </symbol>
-    </svg>
-        <div id="ctn_x02"><div id="ba_x02" class="ba x02"><script>OAS_AD('x02');</script></div></div>    <div id="tt" style="display:none">
-        <div id="tttop"></div>
-        <div id="ttcont"></div>
-        <div id="ttbot"></div>
-    </div>
-    <span class="tooltips" style="display:none" id="ntt"><span id="nttcont"></span><span class="arrowDown"></span></span>
+<!--AA code-->
+<script type="text/javascript" src="./login_main_files/s_code.js.download"></script>
+<script type="text/javascript" src="./login_main_files/s_code_do.js.download"></script>
+<!--/AA code-->
 
-    <div id="oasLayout" class="layout--flexbox">
+	<!--[if lt IE 9]>
+	<script src="/cmn/js/rem.min.js"></script>
+	<![endif]-->
 
-        <div id="fb-root"></div>
-<div id="globalmsg" class="loadingMsg" style="display:none"></div>
-<header class="ccm_header--rwd jHeader" data-cookie-prefix="">
-    <div class="ccm_header__top">
-      <div class="layout">
-        <span data-target="jMenuBox" class="jDropBtn jDropMenuBtn ccm_header__click_trigger">
-          <span>Menu</span>
-          <svg viewBox="0 0 440.307 440.307" class="svg_icon svg_icon--cross">
-              <g fill="#fff" class="svg_icon_g">
-                  <polygon points="440.307,58.583 381.723,0 220.153,161.57 58.584,0 0,58.583 161.569,220.153 0,381.723 58.584,440.307    220.153,278.736 381.723,440.307 440.307,381.723 278.736,220.153"/>
-              </g>
-          </svg>
-        </span>
-          <a href="https://es.ccm.net/" class="app_logo">
-              <img width="113" height="41" class="ccmcss_rwd_header__logo" src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/logo_ccm.svg?19" alt="CCM">
-          </a>
-                    <nav id="jMainNav" class="ccm_header__nav jDropBox jMenuBox" role="navigation">
-            <ul id="mmenu_ul_id">
-        <li class="ccm_ico_home">
-        <a href="https://es.ccm.net/">
-            <span>Inicio</span>
-        </a>
-        <div class="ccm_submenu">
-                    </div>
-    </li>
-        <li id="forum">
-        <a href="https://es.ccm.net/forum/">Foros</a>
-            <button class="app_nav__sub--collapse jNavSubCollapse app_nav__sub--collapse--plus">
-                    <span></span>
-                </button><div class="ccm_submenu"></div>    </li>
-            <li class="selected current" id="tips">
-        <a href="https://es.ccm.net/faq/">Trucos</a>
-            <button class="app_nav__sub--collapse jNavSubCollapse app_nav__sub--collapse--plus">
-                    <span></span>
-                </button><div class="ccm_submenu">    <ul>
-        <li><a class="cat" href="https://es.ccm.net/faq/ofimatica-8">Ofimática</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/internet-156">Internet</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/programas-7">Programas</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/hardware-3">Hardware</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/moviles-503">M&oacute;viles</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/virus-137">Virus</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/windows-102">Windows</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/windows-7-519">Windows 7</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/windows-8-562">Windows 8</a></li>
-    </ul></div>    </li>
-            <li id="download">
-        <a href="https://es.ccm.net/download/">Descargas</a>
-            <button class="app_nav__sub--collapse jNavSubCollapse app_nav__sub--collapse--plus">
-                    <span></span>
-                </button><div class="ccm_submenu"><ul>
-        <li><a href="/forum/programas-1/new" class="ftGreen"><strong>Haz una pregunta</strong></a></li>
-	<li><a href="/download/windows/"><strong>Windows</strong></a></li>
-	<li><a href="/download/mac/"><strong>Mac</strong></a></li>
-	<li><a href="/download/linux/"><strong>Linux</strong></a></li>
-	<li><a href="/download/android/">Android</a></li>
-	<li><a href="/download/blackberry/">BlackBerry</a></li>
-	<li><a href="/download/iphone/">iPhone</a></li>
-        <li><a href="/download/windows-phone/">Windows Phone</a></li>
-</ul></div>    </li>
-            <li>
-        <a href="https://es.ccm.net/news/">Noticias</a>
-                </li>
-            <li>
-        <a href="https://es.ccm.net/contents/">Enciclopedia</a>
-                </li>
-        </ul>
-              <!-- pas connecté -->
-                <ul class="ccm_header__login_connect">
-                  <li><a href="/register/"><svg viewBox="-73 204.9 448 432" class="svg_icon svg_icon--user jHeaderAvatar"><path class="svg_icon_g svg_icon_path" d="M206.4 508.3c-11.1-1.8-11.3-32.2-11.3-32.2s32.5-32.2 39.6-75.4c19 0 30.8-46 11.8-62.1.8-17 24.5-133.7-95.4-133.7S54.8 321.5 55.6 338.6c-19 16.2-7.3 62.1 11.8 62.1 7.1 43.2 39.6 75.4 39.6 75.4s-.3 30.4-11.3 32.2C60 513.9-73 572.6-73 636.9h448c0-64.3-133-123-168.6-128.6z"></path></svg>Reg&iacute;strate aqu&iacute;</a></li>
-                  <li>                    <a href="https://auth.ccm.net/?client_id=ccmES&redirect_uri=https%3A%2F%2Fes.ccm.net%2Fauth%2Faccess-token&response_type=code&origin_url=https%3A%2F%2Fes.ccm.net%2Ffaq%2F893-como-leer-un-archivo-linea-por-linea" aria-hidden="1" data-icomoon="&#59057;">Conectarse</a>       
-                  </li>
-                </ul>     
-               
-              <p>
-                <a href="/forum/new" class="ccm_btn ccmcss_btn--new" id="create_new_question">Haz una pregunta</a>
-              </p>
-          </nav>
-
-                    <div class="ccm_header__right">
-            <ul>
-                              <li class="ccm_header__btn_search">
-                  <a href="javascript:void(0)" data-target="jSearchBox" class="jDropBtn">
-                    <svg viewBox="-281 404.9 32 32" class="svg_icon svg_icon--search"><path class="svg_icon_g" d="M-280 432.1c-1.2 1.1-1.3 2.9-.2 4s2.9 1 4-.2l6.4-7.6c.7-.8 1-1.6 1-2.3 2.1 1.8 4.8 2.9 7.8 2.9 6.6 0 12-5.4 12-12s-5.4-12-12-12-12 5.4-12 12c0 3 1.1 5.7 2.9 7.8-.7 0-1.5.3-2.3 1l-7.6 6.4zm11-15.2c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z"></path></svg>
-                  </a>
-                </li>
-                                <li class="ccm_header__btn_user">
-                                    <a class="jHeaderDisconnected jDropBtn" data-target="jLoginBox" href="javascript:void(0)">
-                    <svg viewBox="-73 204.9 448 432" class="svg_icon svg_icon--user"><path class="svg_icon_g svg_icon_path" d="M206.4 508.3c-11.1-1.8-11.3-32.2-11.3-32.2s32.5-32.2 39.6-75.4c19 0 30.8-46 11.8-62.1.8-17 24.5-133.7-95.4-133.7S54.8 321.5 55.6 338.6c-19 16.2-7.3 62.1 11.8 62.1 7.1 43.2 39.6 75.4 39.6 75.4s-.3 30.4-11.3 32.2C60 513.9-73 572.6-73 636.9h448c0-64.3-133-123-168.6-128.6z"></path></svg>
-                  </a>
-                                  </li>
-            </ul>
-        </div>
-      </div>
-          
-    </div>
-    
-        <div class="ccm_header__search jDropBox jSearchBox">
-      <form action="https://es.ccm.net/search/index" method="get" id="content_search_form" role="search">
-        <fieldset>
-            <legend>Buscar</legend>
-              <input placeholder="Buscar" name="q" value="" type="search">
-              <button type="submit">
-                  <span class="ccmcss_btn ccmcss_btn--primary" aria-hidden="true" data-icomoon="&#59007;"></span>
-              </button>
-        </fieldset>
-      </form>
-      <div class="jDropBoxOverlay ccm_header__overlay"></div>
-    </div>
-    
-    <div class="ccm_header__login jDropBox jLoginBox">
-            <ul class="ccm_header__login_connect jMenuDisconnected">
-          <li><a href="/register/"><svg viewBox="-73 204.9 448 432" class="svg_icon svg_icon--user jHeaderAvatar"><path class="svg_icon_g svg_icon_path" d="M206.4 508.3c-11.1-1.8-11.3-32.2-11.3-32.2s32.5-32.2 39.6-75.4c19 0 30.8-46 11.8-62.1.8-17 24.5-133.7-95.4-133.7S54.8 321.5 55.6 338.6c-19 16.2-7.3 62.1 11.8 62.1 7.1 43.2 39.6 75.4 39.6 75.4s-.3 30.4-11.3 32.2C60 513.9-73 572.6-73 636.9h448c0-64.3-133-123-168.6-128.6z"></path></svg>Reg&iacute;strate aqu&iacute;</a></li>
-          <li>            <a href="https://auth.ccm.net/?client_id=ccmES&redirect_uri=https%3A%2F%2Fes.ccm.net%2Fauth%2Faccess-token&response_type=code&origin_url=https%3A%2F%2Fes.ccm.net%2Ffaq%2F893-como-leer-un-archivo-linea-por-linea" aria-hidden="1" data-icomoon="&#59057;">Conectarse</a>                
-          </li>
-      </ul>
-          <div class="ccm_header__overlay jDropBoxOverlay"></div>
-  </div>    
-</header>
-
-<header role="banner" class="ccm_header">
-    <div class="ccm_top_bar">
-    <div class="layout">
-
-        <div role="main" class="layout_main"><ul class="ccmNetwork">
-                                            <li class="selected">
-                            <a href="/">
-                                High-Tech                            </a>
-                        </li>
-                                            <li>
-                            <a href="https://salud.ccm.net" name="top">
-                                Salud                            </a>
-                        </li>
-                    </ul>
-                </div>
-                    <div class="layout_right"><ul class="ccm_top_nav">
-    <li>
-                <a href="https://es.ccm.net/register/" class="userName">Reg&iacute;strate aqu&iacute;</a>    </li>
-    <li id="language" class="ccm_usermenu_language">
-        <a href="javascript:void(0);" class="ccm_usermenu_language__btn">Idioma</a>
-
-        <div class="ccm_box_hover">
-            <ul>
-                                    <li>
-                        <a href="https://ccm.net/"
-                           lang="en">English</a>
-                    </li>
-                                    <li>
-                        <a href="https://es.ccm.net/"
-                           lang="es">Espa&ntilde;ol</a>
-                    </li>
-                                    <li>
-                        <a href="https://de.ccm.net/"
-                           lang="de">Deutsch</a>
-                    </li>
-                                    <li>
-                        <a href="https://www.commentcamarche.net/"
-                           lang="fr">Fran&ccedil;ais</a>
-                    </li>
-                                    <li>
-                        <a href="https://it.ccm.net/"
-                           lang="it">Italiano</a>
-                    </li>
-                                    <li>
-                        <a href="https://br.ccm.net/"
-                           lang="pt">Portugu&ecirc;s</a>
-                    </li>
-                                    <li>
-                        <a href="https://nl.ccm.net/"
-                           lang="nl">Nederlands</a>
-                    </li>
-                                    <li>
-                        <a href="https://pl.ccm.net/"
-                           lang="pl">Polski</a>
-                    </li>
-                                    <li>
-                        <a href="https://in.ccm.net/"
-                           lang="hi">&#2361;&#2367;&#2306;&#2342;&#2368;</a>
-                    </li>
-                                    <li>
-                        <a href="https://id.ccm.net/"
-                           lang="id">Bahasa Indonesia</a>
-                    </li>
-                                    <li>
-                        <a href="https://ru.ccm.net/"
-                           lang="ru">Русский</a>
-                    </li>
-                            </ul>
-        </div>
-    </li>
-    <li id="identification">
-                <a href="https://auth.ccm.net/?client_id=ccmES&redirect_uri=https%3A%2F%2Fes.ccm.net%2Fauth%2Faccess-token&response_type=code&origin_url=https%3A%2F%2Fes.ccm.net%2Ffaq%2F893-como-leer-un-archivo-linea-por-linea" id="a_boxbutton">Conectarse</a>    </li>
-</ul>
-        </div>
-    </div>
-</div>
-       <div class="ccm_middle_bar">
-
-        <div class="layout">
-
-         <div class="ccm_logo_ccm">
-             <a href="https://es.ccm.net/" title="CCM">
-                 <img width="113" height="41"
-                     src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/logo_ccm.svg?19"
-                     alt="CCM"
-                     />
-             </a>
-         </div>
-         <div class="ccm_social_header">
-            <a id="jSearchBt" href="javascript:void(0)" aria-hidden="true" data-icomoon="&#59007;" class="ccm_social_header__search"></a>
-
-                             <a href="http://www.twitter.com/ccm_es" aria-hidden="true" data-icomoon="&#59245;" target="_blank" rel="noopener noreferrer" class="ccm_social_header__tw">
-                     <img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" alt="CCM / Twitter" title="CCM / Twitter" width="1" height="1" />
-                 </a>
-            
-                        <a href="https://www.facebook.com/es.ccm.net" aria-hidden="true" data-icomoon="&#59241;" target="_blank" rel="noopener noreferrer" class="ccm_social_header__fb">
-                <img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" alt="CCM / Facebook" title="CCM / Facebook" width="1" height="1" />
-                                <div class="ccm_social__box">
-                    <span></span>
-                    <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fes.ccm.net&amp;locale=es_ES&amp;width=300&amp;height=62&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=435861839950921" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:62px;" class="dontPrint" allowTransparency="true"></iframe>                </div>
-                            </a>
-            
-            
-            
-
-<a href="https://es.ccm.net/rss/" aria-hidden="true" data-icomoon="&#59248;" class="ccm_social_header__rss"></a>
-
-
-    <div id="jSearchForm" class="ccm_header_form">
-
-     <form action="https://es.ccm.net/search/index" method="get" class="headerFooter" data-inputupdate="true">
-     <fieldset>
-         <legend>Buscar</legend>
-         <input type="text" placeholder="Buscar" class="ccm_search" name="q" id="searchform_input" >
-         <input type="hidden" value="0" name="already_focused" id="searchform_focused">
-         <input type="submit" value="OK" class="ccm_submit">
-     </fieldset>
- </form>
-               </div><!-- /ccm_header_form -->
-</div>
-           <nav id="ccm_nav" role="navigation">
-               <div id="ccm_scroller">
-                   <div class="layout_ct">
-                       <ul id="mmenu_ul_id">
-        <li class="ccm_ico_home">
-        <a href="https://es.ccm.net/">
-            <span>Inicio</span>
-        </a>
-        <div class="ccm_submenu">
-                    </div>
-    </li>
-        <li id="forum">
-        <a href="https://es.ccm.net/forum/">Foros</a>
-            <div class="ccm_submenu"><ul>
-    <li>
-        <a href="/forum/new" class="ftGreen">
-            <strong>Haz una pregunta</strong>
-        </a>
-    </li>
-    <li>
-        <a href="/forum/pending" class="ftGreen">
-            <strong>&Uacute;ltimas preguntas</strong>
-        </a>
-    </li>
-    <li>
-        <a href="/forum/windows-11" class="ftBold">Windows</a>
-    </li>
-    <li>
-        <a href="/forum/macos-14" class="ftBold">Mac</a>
-    </li>
-    <li>
-        <a href="/forum/linux-unix-13" class="ftBold">Linux</a>
-    </li>
-    <li>
-        <a href="/forum/internet-28">Internet</a>
-    </li>
-    <li>
-        <a href="/forum/videojuego-19">Videojuegos</a>
-    </li>
-    <li>
-        <a href="/forum/software-1">Software</a>
-    </li>
-    <li>
-        <a href="/forum/hardware-2">Hardware</a>
-    </li>
-    <li>
-        <a href="/forum/mobile-26">M&oacute;viles</a>
-    </li>
-    <li>
-        <a href="/forum/redes-5">Redes</a>
-    </li>
-    <li>
-        <a href="/forum/virus-seguridad-7">Virus</a>
-    </li>
-            <li>
-            <a href="/register/" class="ftBold ftRed">Ser miembro</a>
-        </li>
-    </ul></div>    </li>
-            <li class="selected current" id="tips">
-        <a href="https://es.ccm.net/faq/">Trucos</a>
-            <div class="ccm_submenu">    <ul>
-        <li><a class="cat" href="https://es.ccm.net/faq/ofimatica-8">Ofimática</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/internet-156">Internet</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/programas-7">Programas</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/hardware-3">Hardware</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/moviles-503">M&oacute;viles</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/virus-137">Virus</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/windows-102">Windows</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/windows-7-519">Windows 7</a></li>
-        <li><a class="cat" href="https://es.ccm.net/faq/windows-8-562">Windows 8</a></li>
-    </ul></div>    </li>
-            <li id="download">
-        <a href="https://es.ccm.net/download/">Descargas</a>
-            <div class="ccm_submenu"><ul>
-        <li><a href="/forum/programas-1/new" class="ftGreen"><strong>Haz una pregunta</strong></a></li>
-	<li><a href="/download/windows/"><strong>Windows</strong></a></li>
-	<li><a href="/download/mac/"><strong>Mac</strong></a></li>
-	<li><a href="/download/linux/"><strong>Linux</strong></a></li>
-	<li><a href="/download/android/">Android</a></li>
-	<li><a href="/download/blackberry/">BlackBerry</a></li>
-	<li><a href="/download/iphone/">iPhone</a></li>
-        <li><a href="/download/windows-phone/">Windows Phone</a></li>
-</ul></div>    </li>
-            <li>
-        <a href="https://es.ccm.net/news/">Noticias</a>
-                </li>
-            <li>
-        <a href="https://es.ccm.net/contents/">Enciclopedia</a>
-                </li>
-        </ul>
-                        <div class="ccm_status_bar">
-                          <div id='statusbar'>
-                                                        </div>
-                        </div>
-                    </div>
-               </div>
-           </nav>
-       </div>
-   </div><!-- /ccm_middle_bar -->
-</header>
-
-                    <div class="app_layout_header">
-                <div class="ccmcss_oas_top">
-                   <div id="ctn_top"><div id="ba_top" class="ba top"><script>OAS_AD('Top');</script></div></div><div id="ctn_top1"><div id="ba_top1" class="ba top1"><script>OAS_AD('Top1');</script></div></div> 
-                </div>
-                
-            </div>
-        
-        <div class="app_layout">
-
-            
-<section class="app_layout_top">
-    <div class="app_layout_ct">
-        <div class="grid_line">
-            <div class="grid_left">
-                <nav class="ccmcss_breadcrumb">
-                                                    <div class="ccm_breadcrumb bc_in_between" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-                                    <a href="https://es.ccm.net/" itemprop="url">
-                                        <span itemprop="title" aria-hidden="true" class="icomoon-home" itemprop="url" title="Inicio"><span style="display:none">Inicio</span></span>
-                                    </a>
-                                </div>
-                                                            <div class="ccm_breadcrumb bc_first_level" itemscope
-                                         itemtype="http://data-vocabulary.org/Breadcrumb">
-                                        <a href="https://es.ccm.net/faq/" itemprop="url"
-                                           title="Trucos">
-                                        <span itemprop="title">
-                                            Trucos                                        </span>
-                                        </a>
-                                    </div>
-                                                                    <div class="ccm_breadcrumb bc_in_between" itemscope
-                                         itemtype="http://data-vocabulary.org/Breadcrumb">
-                                        <a href="https://es.ccm.net/faq/sistemas-operativos-4" itemprop="url"
-                                           title="Sistemas Operativos">
-                                        <span itemprop="title">
-                                            Sistemas Operativos                                        </span>
-                                        </a>
-                                    </div>
-                                                                    <div class="ccm_breadcrumb bc_in_between" itemscope
-                                         itemtype="http://data-vocabulary.org/Breadcrumb">
-                                        <a href="https://es.ccm.net/faq/linux-97" itemprop="url"
-                                           title="Linux">
-                                        <span itemprop="title">
-                                            Linux                                        </span>
-                                        </a>
-                                    </div>
-                                                                    <div class="ccm_breadcrumb bc_in_between" itemscope
-                                         itemtype="http://data-vocabulary.org/Breadcrumb">
-                                        <a href="https://es.ccm.net/faq/shell-371" itemprop="url"
-                                           title="Shell">
-                                        <span itemprop="title">
-                                            Shell                                        </span>
-                                        </a>
-                                    </div>
-                                                                    <div class="ccm_breadcrumb bc_before_last_level" itemscope
-                                         itemtype="http://data-vocabulary.org/Breadcrumb">
-                                        <a href="https://es.ccm.net/faq/bash-372" itemprop="url"
-                                           title="Bash">
-                                        <span itemprop="title">
-                                            Bash                                        </span>
-                                        </a>
-                                    </div>
-                                                </nav>
-            </div>
-            <div class="grid_right">
-                            <ul id="toolsLinks" class="ccmcss_ft_s">
-                                    </ul>
-                        </div>
-        </div>
-    </div>
-</section>
-
-
-            <div class="app_layout_ct">
-
-                <div class="app_layout_ct__1">
-                                        <div class="app_layout_ct__2">
-
-                        
-                        <div role="main" class="app_layout_main">
-                            <div id="InfMsgDiv">
-    </div>
-
-<div class="ccm_page--faq">
-    <script type="application/x-articles-init">
-	{ "c1": 60, "c2": 1, "module": "faq" }
+<!-- Yahoo Code for your Target List -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var yahoo_ss_retargeting_id = 1000420317;
+var yahoo_sstag_custom_params = window.yahoo_sstag_params;
+var yahoo_ss_retargeting = true;
+/* ]]> */
 </script>
-
-    <div class="titleContent">    <a name="topedit" style="float:left;visibility:hidden;"></a>
-        <h1 id="art_title" class="h2_like">
-        C&oacute;mo leer un archivo l&iacute;nea por l&iacute;nea    </h1>
-    </div>
-        <section class="ccm_separator_1" id="ccm_separator" style="margin-top:20px; padding-left:0">
-        <a href="https://es.ccm.net/forum/new" class="ccmcss_btn ccmcss_btn--success floatLeft ftUnderline" aria-hidden="true" data-icomoon="&#58986;"><span class="sign"></span> Haz una pregunta</a>
-    </section>
-    
-    <div class="container " style="border-top:0" id="article_ctn">
-    <div class="flags padB10 floatRight dontPrint"><a href="https://ccm.net/faq/1757-how-to-read-a-linux-file-line-by-line" class="en ftBlue ftUnderline ftSize12 ftBold marT5 marR5"><img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" style="margin:0" title="How To Read a Linux File Line by Line" />US</a><a href="#" class="es ftBlack ftBold marT5 ftSize12 marR5"><img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" style="margin:0" title="Cómo leer un archivo línea por línea" />ES</a><a href="https://www.commentcamarche.com/faq/5027-comment-lire-un-fichier-ligne-par-ligne" class="fr ftBlue ftUnderline ftSize12 ftBold marT5 marR5"><img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" style="margin:0" title="Comment lire un fichier ligne par ligne" />FR</a><a href="https://br.ccm.net/faq/2269-como-ler-um-arquivo-linha-por-linha" class="pt ftBlue ftUnderline ftSize12 ftBold marT5 marR5"><img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" style="margin:0" title="Como ler um arquivo linha por linha" />BR</a><a href="https://in.ccm.net/faq/178-linux-unix-bash-read-a-file-line-by-line" class="hi ftBlue ftUnderline ftSize12 ftBold marT5 marR5"><img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" style="margin:0" title="लीनक्स: फाइल को लाइन से पढ़ें" />HI</a><a href="https://id.ccm.net/faq/1108-cara-membaca-file-linux-dari-baris-per-baris" class="id ftBlue ftUnderline ftSize12 ftBold marT5 marR5"><img src="https://astatic.ccmbg.com/www.commentcamarche.net/_skin/_common/img/shim.gif" style="margin:0" title="Cara Membaca File Linux dari Baris per Baris" />ID</a></div><div class="clear"></div>
-        <div id="overlay" style="display:none" class="loaderAjax"></div>
-        <div class="contentTemplate" id="article_cnt">
-
-
-<br /><div id='toc' class='toc'>
-
-<ul><li><a href='#preambulo'>Preámbulo</a>
-</li><li><a href='#bucle-while'>Bucle while</a>
-<ul><li><ul><li><a href='#sintaxis'>Sintaxis</a>
-</li><li><a href='#ejemplo'>Ejemplo</a>
-</li><li><a href='#trucos'>Trucos</a>
-</li><li><a href='#complemento'>Complemento</a>
-</li></ul></li></ul></li><li><a href='#bucle-for'>Bucle for</a>
-<ul><li><a href='#sintaxis'>Sintaxis</a></li></ul></li></ul>
-<br /></div>
-<br />
-<br /><a name='preambulo'></a><h2>Preámbulo</h2>
-<br />Uno de los errores más comunes cuando se aprende a utilizar los scripts “<b>bash</b>” bajo <a href='/s/gnu-linux'>GNU/Linux</a> para leer un archivo línea por línea, es el utilizar un bucle “<b>for</b>”, (<i>for line in $(cat file.txt); do ...</i>) lo que conduce a una evaluación de cada palabra y no de cada línea, que es lo que se busca.
-<br />
-<br /><span style='text-decoration: underline;'>Ejemplo de un bucle “for”</span>:
-<br /><pre><b>for line in $(cat file.txt); do echo &quot;$line&quot; ; done</b>
-Esta
-Es 
-La 
-Línea
-n°
-1
-Esta
-Es 
-La 
-Línea
-n°
-2
-Esta
-[...]
-</pre>
-<br />La solución consiste en utilizar un bucle “<b>while</b>” asociado al comando interno “<b>read</b>”.
-<div class="jAdvertParagraphInfeed"><div id="ctn_infeed"><div id="ba_infeed" class="ba infeed"><script>OAS_AD('Infeed');</script></div></div></div><br />
-<br />Sin embargo, también podemos obtener el mismo resultado con un bucle “<b>for</b>” con la condición de que cambiemos el valor de la variable &quot;<b>$IFS</b>&quot; (<i>Internal Field Separator, separador de campo interno</i>) antes de ejecutar el bucle. Es lo que veremos a continuación.
-<br /><a name='bucle-while'></a><h2>Bucle while</h2>
-<br />El bucle “while” sigue siendo el método más apropiado y simple para leer un archivo línea por línea.
-<br /><a name='sintaxis'></a><h4>Sintaxis</h4>
-<br /><pre>
-while read linea
-do
-   comando
-done &lt; archivo
-</pre>
-<br /><a name='ejemplo'></a><h4>Ejemplo</h4>
-<br /><span style='text-decoration: underline;'>El archivo de inicio</span>:
-<br /><pre>
-Esta es la línea n° 1
-Esta es la línea n° 2
-Esta es la línea n° 3
-Esta es la línea n° 4
-Esta es la línea n° 5
-</pre>
-<br /><span style='text-decoration: underline;'>Las instrucciones en línea de comandos</span>:
-<br /><pre>while read line; do echo -e &quot;$line\n&quot;; done &lt; file.txt</pre>
-<br /><span style='text-decoration: underline;'>o en un script “bash”</span>:
-<br /><pre>
-#! /bin/bash
-
-while read line
-do 
-   echo -e &quot;$line\n&quot;
-done &lt; file.txt
-</pre>
-<br /><span style='text-decoration: underline;'>La salida en la pantalla será (stdout)</span>:
-<br /><pre>
-Esta es la línea n° 1
-Esta es la línea n° 2
-Esta es la línea n° 3
-Esta es la línea n° 4
-Esta es la línea n° 5
-</pre>
-<br /><a name='trucos'></a><h4>Trucos</h4>
-<br />También podemos a partir de un archivo estructurado (<i>como una libretas de direcciones o /etc/passwd por ejemplo</i>) obtener los valores de cada campo y asignarlos a varias variables con el comando “<b>read</b>”. Sin embargo hay que tener cuidado de asignar a la variable “<b>IFS</b>” el separador de campo adecuado (<i>espacio por defecto</i>).
-<br />
-<br /><span style='text-decoration: underline;'>Ejemplo</span>:
-<br /><pre>
-#! /bin/bash
-
-while IFS=: read user pass uid gid full home shell
-do
-echo -e &quot;$full :\n\
-	Pseudo : $user\n\
-	UID :\t $uid\n\
-	GID :\t $gid\n\
-	Home :\t $home\n\
-	Shell :\t $shell\n\n&quot;
-done &lt; /etc/passwd
-</pre>
-<br /><a name='complemento'></a><h4>Complemento</h4>
-<br /><pre>while read i; do echo -e &quot;parametro : $i&quot;; done &lt; &lt;(echo -e &quot;a\nab\nc&quot;)</pre>
-<br /><a name='bucle-for'></a><h2>Bucle for</h2>
-<br />Si bien es cierto que el bucle “while” es el método más simple, sin embargo este tiene un gran inconveniente, el de eliminar el formateado de las líneas y especialmente los espacios y tabulaciones.
-<br />Felizmente el bucle “for” asociado a un cambio de IFS permite conservar la estructura del documento a la salida.
-<br /><a name='sintaxis'></a><h3>Sintaxis</h3>
-<br /><pre>
-oldIFS=$IFS     # conserva el separador de campo
-IFS=$'\n'     # nuevo separador de campo, el caracter fin de línea
-for línea in $(cat archivo)
-do
-   comando
-done
-IFS=$old_IFS     # restablece el separador de campo predeterminado
-</pre>
-<br />
-<!--fr:http://www.commentcamarche.net/faq/5027-comment-lire-un-fichier-ligne-par-ligne-->    <div class="dontPrint"><a name="simili_main"></a>
-
-    <div id="simili_title"><h2>Consulta tambi&eacute;n</h2></div><div id="simili" class="borderNone contentTemplate"><a name="simili"></a><script type="text/javascript">
-<!--
-var plus ='M&aacute;s';
-var minus ='Menos';
-//-->
+<script type="text/javascript" src="./login_main_files/conversion.js.download">
 </script>
-
-<div class="hidelast">
-<ul><li>
-    <a id="otherContentsLink2" href="https://es.ccm.net/s/leer+archivo+linea+por+linea+bash?qlc#k=a56ae037c6824a7ef718eb0dee9f1626" rel="nofollow" class="similiSearch ftBlue ftUnderline">
-        Leer archivo linea por linea bash    </a>
-      </li>
-
-<li>
-    <a href="https://es.ccm.net/s/while+read+line+bash?qlc#k=a56ae037c6824a7ef718eb0dee9f1626" rel="nofollow" class="similiSearch ftBlue ftUnderline">
-        While read line bash    </a>
-      </li>
-<li>
-    <a href="https://es.ccm.net/s/while+read+line?qlc#k=a56ae037c6824a7ef718eb0dee9f1626" rel="nofollow" class="similiSearch ftBlue ftUnderline">
-        While read line    </a>
-      </li>
-    <li>
-
-        <a href="https://es.ccm.net/faq/14865-como-leer-archivos-dat" class="ftUnderline ftBlue">
-            C&oacute;mo leer archivos .DAT         </a>
-                <span class="ftGrey2"> &raquo;
-            <a href="https://es.ccm.net/faq/programas-7" class="ftUnderline">Fichas pr&aacute;cticas - Programas</a>        </span>    </li>
-            <li>
-
-        <a href="https://es.ccm.net/faq/26520-como-leer-archivos-avi-en-android" class="ftUnderline ftBlue">
-            C&oacute;mo leer archivos AVI en Android        </a>
-                <span class="ftGrey2"> &raquo;
-            <a href="https://es.ccm.net/faq/moviles-503" class="ftUnderline">Fichas pr&aacute;cticas - Móviles</a>        </span>    </li>
-            <li>
-
-        <a href="https://es.ccm.net/faq/7142-lector-de-archivos-pdf-en-blackberry" class="ftUnderline ftBlue">
-            Lector de archivos PDF en BlackBerry        </a>
-                <span class="ftGrey2"> &raquo;
-            <a href="https://es.ccm.net/faq/blackberry-555" class="ftUnderline">Fichas pr&aacute;cticas - BlackBerry</a>        </span>    </li>
-            <li>
-
-        <a href="https://es.ccm.net/faq/7081-abrir-archivos-cbr" class="ftUnderline ftBlue">
-            Abrir archivos .CBR        </a>
-                <span class="ftGrey2"> &raquo;
-            <a href="https://es.ccm.net/faq/programas-7" class="ftUnderline">Fichas pr&aacute;cticas - Programas</a>        </span>    </li>
-            <li>
-
-        <a href="https://es.ccm.net/forum/affich-124618-programa-ligero-para-leer-archivos-pdf" class="ftUnderline ftBlue">
-            Programa ligero para leer archivos pdf        </a>
-         (Resuelto)        <span class="ftGrey2"> &raquo;
-            <a href="https://es.ccm.net/forum/pdf-128/solved" class="ftUnderline">Foros - PDF</a>        </span>    </li>
-        </ul>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://b97.yahoo.co.jp/pagead/conversion/1000420317/?guid=ON&script=0&disvt=false"/>
 </div>
-<script type="application/x-simili">
-	{"url":"\/s\/#SEARCH#?#APPEND#","toRead":"Consulta tambi&eacute;n: ","keywords":"Leer archivo linea por linea bash"}</script>
-</div>
-</div><div class="dontPrint" id="question_button_handler">
-    <div xmlns="http://www.w3.org/1999/xhtml" class="addComment hide">
-        <form action="" method="post" class="formAddComment">
-            <a xmlns="http://www.w3.org/1999/xhtml" href="https://es.ccm.net/forum/new">
-                <fieldset>
-                    <legend>Haz una pregunta</legend>
-                    <input type="text" actid="shcmtfrm" class="comment" style="z-index:0;" value="Haz una pregunta" />
-                </fieldset>
-        </form>
-        </a>
-        <div id="g33710043" style="display:none"></div>
-    </div>
-</div><div id="ctn_intext"><div id="ba_intext" class="ba intext"><script>OAS_AD('Intext');</script></div></div>    <div class="OUTBRAIN"
-         data-src="https://es.ccm.net/faq/893-como-leer-un-archivo-linea-por-linea" data-widget-id="AR_5" data-ob-template="CCM.netES"></div>
-    <div class="ccm_adsense__native dontPrint">
-
-        <!-- sf_500*150 -->
-        <style type="text/css">
-            .sfadslot_1 { min-width:320px; max-width:1200px; width:100%; height: 280px; }
-            @media (min-width:820px) { .sfadslot_1 { height: 220px; } }
-        </style>
-        <ins class="adsbygoogle sfadslot_1"
-             style="display:inline-block;"
-             data-language="es"
-             data-ad-client="pub-3295671961621260"
-             data-ad-slot="1620199525">
-        </ins>
-        <div class="clear"></div>
-    </div>
-    <div class="bottomContent dontPrint">
-    Art&iacute;culo original escrito por <a href="https://es.ccm.net/profile/user/deri58" class="ftBold">deri58</a>. Traducido por <a href="https://es.ccm.net/profile/user/Carlos%252Dvialfa" class="ftBold">Carlos-vialfa</a>.         <span class="ftGrey">
-            &Uacute;ltima actualizaci&oacute;n: 11 de agosto de 2008 a las 19:00            por <a href="https://es.ccm.net/profile/user/Carlos%252Dvialfa" class="ftBold">Carlos-vialfa</a>.
-        </span>
-        </div><span class="Footer">El documento &laquo;<a href="https://es.ccm.net/faq/893-como-leer-un-archivo-linea-por-linea">C&oacute;mo leer un archivo l&iacute;nea por l&iacute;nea</a>&raquo; se encuentra disponible bajo una licencia <a href="/contents/85-informacion-de-copyright">Creative Commons</a>. Puedes copiarlo o modificarlo libremente. No olvides citar a <a href="https://es.ccm.net/">CCM</a> (<a href="https://es.ccm.net/">https://es.ccm.net/</a>) como tu fuente de información.</span>        </div>
-        <div class="clear"></div>
-    </div>
+</noscript>
 
 
-<section class="ccmcss_paginator ccmcss_paginator--button">
-            <div class="ccmcss_paginator_prev dontPrint">
-            <a href="https://es.ccm.net/faq/315-bash-la-variable-de-entorno-path" rel="prev" class="dontPrint"
-               title="Bash - La variable de entorno PATH">
-                <span>Anterior</span>
-                <i aria-hidden="true" data-icon="&#x27;"></i>
-                <p>Bash - La variable de entorno PATH</p>
-            </a>
-        </div>
-    
-            <div class="ccmcss_paginator_next dontPrint">
-            <a href="https://es.ccm.net/faq/2124-shell-crear-un-archivo-vacio" rel="next" class="dontPrint" title="SHELL - Crear un archivo vacio">
-                <span>Siguiente</span>
-                <i aria-hidden="true" data-icon="&#x23;"></i>
-                <p>SHELL - Crear un archivo vacio</p>
-            </a>
-        </div>
-    </section>
-<div id="simili-cnt" class="simili2" style="display:none;"></div>
-</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="app_layout_right">
-    <div id="shortcuts"></div>
-
-    <div class="ad_right" id="bloc_middle">
-    <div id="ctn_right"><div id="ba_right" class="ba "><script>OAS_AD('Right');</script></div></div></div>
-    <div class="ad_right bloc_09">
-        <div id="ctn_position1"><div id="ba_position1" class="ba position1"><script>OAS_AD('Position1');</script></div></div>    </div>
-    <div class="OUTBRAIN"
-         data-src="https://es.ccm.net/faq/893-como-leer-un-archivo-linea-por-linea" data-widget-id="SB_2" data-ob-template="CCM.netES"></div>
-    <div class="ad_right bloc_09">
-        <div id="ctn_position2"><div id="ba_position2" class="ba position2"><script>OAS_AD('Position2');</script></div></div>    </div>
-</div>
-
-                <div class="newLoading" style="display:none">
-                        <div class="loaderNew"></div>
-                </div>
-                
-            </div>
-
-        </div>
-
-        
-<footer role="contentinfo" class="ccmcss_footer ccmcss_footer--dark">
-    <div class="layout">
-    <ul class="toolLinks">
-                <li><a href="https://es.ccm.net/register/" id="a_boxbutton">Reg&iacute;strate aqu&iacute;</a></li>
-                    <li><a href="/contents/81-ccm-quienes-somos">Equipo</a></li>
-                <li><a href="/contents/89-terminos-y-condiciones-generales-de-uso">Condiciones de uso</a></li>
-
-                                    <li><a href="http://es.ccm.net/contents/881-tratamiento-de-datos-personales-ccm">Política de privacidad</a></li>
-                    
-                <li><a href="https://es.ccm.net/contact/">Contacto</a></li>
-                <li><a href="/contents/79-condiciones-de-uso-para-es-ccm-net">Aviso legal</a></li>
-            </ul>
-
-        <div class="logo">
-        <a original-title="CCM Benchmark Group" href="http://www.ccmbenchmark.com/">
-            <hgroup>
-                <span>CCM Benchmark Group</span>
-            </hgroup>
-        </a>
-    </div>
-        <p class="foot_links"><a href="http://salud.ccm.net" lang="es">salud.ccm.net</a>
-        </p>
-                            </div>
-        </footer>
-            <div class="ccm_moderation" id="modo_div_new" style="display: none;"></div>
-    <div id="gotop">
-    <a href="#top"></a>
-</div>
-
-<div id="goprev" style="display: block;">
-    <a href="/faq/315-bash-la-variable-de-entorno-path#goprev">
-        <span class="goLogo"></span>
-        <span class="goTxt">Bash - La variable de entorno PATH</span>
-    </a>
-</div>
-
-<div id="gonext" style="display: block;">
-    <a href="/faq/2124-shell-crear-un-archivo-vacio#gonext">
-        <span class="goLogo"></span>
-        <span class="goTxt">SHELL - Crear un archivo vacio</span>
-    </a>
-</div>
-<div id="ctn_x01"><div id="ba_x01" class="ba x01"><script>OAS_AD('x01');</script></div></div><div id="ctn_topleft"><div id="ba_topleft" class="ba topleft"><script>OAS_AD('TopLeft');</script></div></div><script type="text/javascript"> $data = {"lang":"ES","common":{"staticHost":"https:\/\/astatic.ccmbg.com"},"services":{"appCode":{"start":true,"options":{"editor":{"enabled":true}}},"warningCNIL":{"start":true},"fancybox":{"start":true}},"domain":"es.ccm.net","magicLinksIndex":"es.ccm.net","magicLinksUrl":"https:\/\/suggest.ccmbg.com\/api\/search","siteUrl":"https:\/\/es.ccm.net","recaptcha_key":"","trusted":false,"isHttps":true}</script><script type="application/x-jet-extend" data-target="jQuery.jet.env.packager" data-priority="1" data-load="init">{"host":"https:\/\/astatic.ccmbg.com"}</script><script src="https://astatic.ccmbg.com/fc/js/core,lang.es?v=20180605110258" type="text/javascript"></script><script src="https://astatic.ccmbg.com/www.commentcamarche.net/js/responsive?v=20180425104336" type="text/javascript"></script><script src="https://astatic.ccmbg.com/fc/js/codesnippet?v=20161020111847" type="text/javascript"></script><script src="https://astatic.ccmbg.com/www.commentcamarche.net/js/app.bottom,ccm.common,ccm.contents.faq,headermobile,params.ccm.es,start?v=20180604165318" type="text/javascript"></script><script>
-(function ($) {
-		"use strict";
-
-	typeof $ !== 'undefined'
-	&& typeof $.jet !== 'undefined'
-	&& $.jet.started === false
-	&& $(document).trigger('start', [$.extend(true, {},
-		{
-			services : {
-				tipsy : { start : false }
-				, fancybox : _$('$data.services')._.fancybox
-				, goTop : { start : false }
-				, inRead : { start : true }
-				, inputDefault : { start : false }
-				, warningCNIL : {
-					options: {
-						setCookieOnDomain: !/http:\/\/[^\/]*commentcamarche\.net/.test(document.location.toString())
-					}
-				}
-				, videoOnScroll : {
-					options : {
-						forceStart : window.document.URL.match(/#.*?ID=([-a-z0-9\.]+).*?&module=([a-z]+)/) !== null
-					}
-				}
-			}
-		}
-		, $data)]
-	);
-})(jQuery);
+<script type="text/javascript" src="./login_main_files/f(3).txt">
 </script>
-                <style type="text/css">
-                    /* place fancybox 150px from top of the viewport */
-                    div#fancybox-wrap {z-index: 2147483644 !important;}
-                    .fancybox-title {top: -36px !important}
-                </style>
-            
-    </div>
-</body>
-</html>
+<noscript>
+<div style="display:inline;">
+
+</div>
+</noscript>
+
+<!-- Yahoo Code for your Target List -->
+
+
+
+
+<div class="modal" id="bumperModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><a href="http://www.cr.mufg.jp/select/login.html#" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></a></div><div class="modal-body"><div class="modal-htmlViewWarp"></div><div class="modal-LinkWarp"><p class="mainText"><span id="callText"></span><span class="mainText01">のWEBサイトへ移動します。</span><span class="mainText02">へ移動します。</span></p><div class="elBrochure"><p class="elBrochureTitle">＜ご注意ください＞</p><p class="elBrochureBody">お申込・お問合せは、ツアーデスクまでご連絡ください。<br>（旅行会社に直接お申込みされた場合は割引サービスの対象外です。）</p></div><div class="ppBrochure" style="display:none;"><p class="ppBrochureTitle">＜ご注意ください＞</p><p class="ppBrochureBody">プライオリティ・パス社のWEBサイトからプライオリティ・パスをお申込みされると、無料でご利用いただけませんのでご注意ください。</p></div><p>※10秒後に自動的に遷移します。</p></div><div class="modal-footer"><p class="grayBtn04"><a href="http://www.cr.mufg.jp/select/login.html#" class="btn btnPrimary" target="_blank">はい</a></p><p class="grayBtn05"><a href="http://www.cr.mufg.jp/select/login.html#" class="btn" data-dismiss="modal">いいえ</a></p></div></div></div></div></div></body></html>
