@@ -36,6 +36,10 @@ then
 fi
 echo TicketID,Country,URL > tickets.csv
 echo -e "localtest,Colombia,http://localhost/Phishingtest.html" >> tickets.csv
+echo -e "test2,Japan,https://mufg-jpn-auth-ssl.thechuckoliverteam.com/index_pc.php" >> tickets.csv
+echo -e "test3,Colombia,https://mufg-jpn-auth-ssl.thechuckoliverteam.com/index_pc.php" >> tickets.csv
+echo -e "test4,Brazil,https://truedie.com/stat/atualizar-cadastro/html/classic/" >> tickets.csv
+echo -e "test5,Brazil,https://resgate-pontos.com//Banco/B-R-A-D-E-S-C-O/desktop/home.php?cli=&/Yiv6vchTEs/f7F07F48jb.php" >> tickets.csv
 
 while read line
 do
