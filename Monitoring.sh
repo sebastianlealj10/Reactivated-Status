@@ -15,7 +15,7 @@ set_proxy () {
       curl $2 -x, --proxy http://customer-analyst-cc-MX:CTAC%40cyxtera.com2018@pr.oxylabs.io:7777> $3
       ;;
     Japan)
-      curl $2 -x, --proxy http://customer-analyst-cc-JP:CTAC%40cyxtera.com2018@pr.oxylabs.io:7777> $3
+      curl $2 -x, --proxy http://customer-analyst-cc-JP:CTAC40cyxtera.com2018@pr.oxylabs.io:7777> $3
       ;;
     Peru)
       curl $2 -x, --proxy http://customer-analyst-cc-PE:CTAC%40cyxtera.com2018@pr.oxylabs.io:7777> $3
@@ -27,6 +27,7 @@ set_proxy () {
       curl $2 > $3
       ;;
   esac
+
 }
 
 rm  ChangeStatus.csv
@@ -35,11 +36,7 @@ then
     mkdir -p HTMLS
 fi
 echo TicketID,Country,URL > tickets.csv
-echo -e "localtest,Colombia,http://localhost/Phishingtest.html" >> tickets.csv
 echo -e "test2,Japan,https://mufg-jpn-auth-ssl.thechuckoliverteam.com/index_pc.php" >> tickets.csv
-echo -e "test3,Colombia,https://mufg-jpn-auth-ssl.thechuckoliverteam.com/index_pc.php" >> tickets.csv
-echo -e "test4,Brazil,https://truedie.com/stat/atualizar-cadastro/html/classic/" >> tickets.csv
-echo -e "test5,Brazil,https://resgate-pontos.com//Banco/B-R-A-D-E-S-C-O/desktop/home.php?cli=&/Yiv6vchTEs/f7F07F48jb.php" >> tickets.csv
 
 while read line
 do
@@ -55,6 +52,15 @@ do
       fi
       oldsite_len=$(cat "HTMLS/$ID".html | wc -l)
       set_proxy $COUNTRY $URL "newsite.html"
+      if [ "$?" -ne 0 ]
+      then
+        set_proxy $COUNTRY $URL "newsite.html"
+      fi
+      if [ "$?" -ne 0 ]
+      then
+        cat HTMLS/$ID.html > "newsite.html"
+        echo "here"
+      fi
       newsite_len=$(cat newsite.html | wc -l)
       if [ $newsite_len -ge $oldsite_len ];
         then
