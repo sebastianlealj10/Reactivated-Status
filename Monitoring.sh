@@ -48,7 +48,7 @@ set_proxy () {
 
 #...........................Create a new folder for save the HTMLS
 rm  ChangeStatus.csv > /dev/null 2>&1
-echo TicketID,Country,URL > ChangeStatus.csv
+echo TicketID,Country,URL,Percentage > ChangeStatus.csv
 if [ ! -d HTMLS ]
 then
     mkdir -p HTMLS
@@ -56,7 +56,7 @@ fi
 #..............................................Example of csv
 echo TicketID,Country,URL > tickets.csv
 echo -e "test2,JAPAN,http://www.mufg-jp.biz/inet/life/ninsyou/entry/top" >> tickets.csv
-echo -e "test3,MEXICO,http://myrunnginesz.co.uk/wp-bnorte.php" >> tickets.csv
+echo -e "test3,COLOMBIA,https://serverfault.com" >> tickets.csv
 
 #..............................This loop is used for read the tickets csv file  curl -L https://stackoverflow.com | grep '<title>'
 
@@ -81,9 +81,6 @@ do
               then
                 set_proxy $COUNTRY $URL $var
                 resp_old=$( tail -1 "HTMLS/$ID".html | sed 's/.$//' | sed 's/^.//' )
-                ip_old=$(dig +short $(echo $URL | awk -F[/:] '{print $4}'))
-                echo $ip_old
-                echo -e $ip_old >> "HTMLS/$ID".html
                 if [ "$?" -ne 0 ] || [ "$resp_old" -eq 000 ]
                   then
                     set_proxy $COUNTRY $URL $var
@@ -93,22 +90,20 @@ do
                         rm "HTMLS/$ID.html"
                     fi
                   else
-                    resp_old=$( tail -1 "HTMLS/$ID".html | sed 's/.$//' | sed 's/^.//' )
-                    ip_old=$(dig +short $(echo $URL | awk -F[/:] '{print $4}'))
-                    title=$(cat "HTMLS/$ID".html  | grep '<title>' | sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q')
+                    ip_old=$(dig +short $(echo $URL | awk -F[/:] '{print $4}')| head -1)
+                    title_old=$(cat "HTMLS/$ID".html  | grep '<title>' | sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q')
                     echo $ip_old
-                    echo $title
+                    echo $title_old
                     echo -e "\n[$ip_old]" >> "HTMLS/$ID".html
-                    echo -e "[$title]" >> "HTMLS/$ID".html
+                    echo -e "[$title_old]" >> "HTMLS/$ID".html
                 fi
               else
-                resp_old=$( tail -1 "HTMLS/$ID".html | sed 's/.$//' | sed 's/^.//' )
-                ip_old=$(dig +short $(echo $URL | awk -F[/:] '{print $4}'))
-                title=$(cat "HTMLS/$ID".html  | grep '<title>' | sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q')
+                ip_old=$(dig +short $(echo $URL | awk -F[/:] '{print $4}')| head -1)
+                title_old=$(cat "HTMLS/$ID".html  | grep '<title>' | sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q')
                 echo $ip_old
-                echo $title
+                echo $title_old
                 echo -e "\n[$ip_old]" >> "HTMLS/$ID".html
-                echo -e "[$title]" >> "HTMLS/$ID".html
+                echo -e "[$title_old]" >> "HTMLS/$ID".html
             fi
       continue
       fi
@@ -118,7 +113,7 @@ if [ -f "HTMLS/$ID.html" ]
     then
 #..........................
 #.....................extracts some data from the html
-      resp_old=$( tail -3 "HTMLS/$ID".html | head -2 | sed 's/.$//' | sed 's/^.//' )
+      resp_old=$( tail -3 "HTMLS/$ID".html | head -1 | sed 's/.$//' | sed 's/^.//' )
       ip_old=$( tail -2 "HTMLS/$ID".html | head -1 | sed 's/.$//' | sed 's/^.//' )
       title_old=$( tail -1 "HTMLS/$ID".html | sed 's/.$//' | sed 's/^.//' )
       echo "resp old: "$resp_old
@@ -147,40 +142,57 @@ if [ -f "HTMLS/$ID.html" ]
 #....................extracts some data from the current html
       newsite_len=$(cat newsite.html | wc -l)
       resp_new=$( tail -1 newsite.html | sed 's/.$//' | sed 's/^.//' )
-      ip_new=$(dig +short $(echo $URL | awk -F[/:] '{print $4}'))
+      ip_new=$(dig +short $(echo $URL | awk -F[/:] '{print $4}')| head -1)
+      title_new=$(cat newsite.html | grep '<title>' | sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q')
       echo "resp new: "$resp_new
       echo "ip new: "$ip_new
+      echo "title: "$title_new
 #................................................
 #...........................conditions for a Reactivated
-      if [ $newsite_len -ge $oldsite_len ];
-        then
-          if [ $newsite_len != 0 ];
-            then
-              diff=$(sdiff -B -s -I, --ignore-matching-lines=[...] newsite.html "HTMLS/$ID".html | wc -l)
-              percentage=$(echo "100 * $diff/ $newsite_len" | bc)
-            else
-              percentage=0
-        fi
-        else
-        if [ $newsite_len != 0 ];
-          then
-            diff=$(sdiff -B -s "HTMLS/$ID".html  newsite.html | wc -l)
-            percentage=$(echo "100 * $diff/ $oldsite_len" | bc)
-          else
-            percentage=0
-       fi
-    fi
+echo "new len: "$newsite_len
+
+
+    diff=$(($(sdiff -B -s -I, --ignore-matching-lines=[...] newsite.html "HTMLS/$ID".html | wc -l) - 3))
+    echo "diff: "$diff
+    percentage=$(echo "100 * $diff/ $newsite_len" | bc)
     first_new="${respnew:0:1}"
-    if [[ $percentage -gt 60 ]];
+    echo "Percentage: " $percentage
+    if [[ $percentage -gt 60 ]]
       then
-        if [[ $first_new == 2 ]];
-          then
-            echo "Reactivated"
-            echo -e $ID,$COUNTRY,$URL >> ChangeStatus.csv
-        fi
+        HTML_Code=25
+      else
+        HTML_Code=0
+    fi
+    if [ "$resp_old" -ne "$resp_new" ]
+      then
+        echo "resp:si"
+        HTML_Resp=25
+      else
+        HTML_Resp=0
+    fi
+    if [ "$ip_old" != "$ip_new" ] && [ ! -z "$ip_new" ]
+      then
+        echo "ip:si"
+        ip=25
+      else
+        ip=0
+    fi
+    if [ "$title_old" != "$title_new" ] && [ ! -z "$title_new" ]
+      then
+        echo "title:si"
+        title=25
+      else
+        title=0
+    fi
+    sum=$((HTML_Code + HTML_Resp + ip + title))
+    echo "add" $sum
+    if [[ $sum -gt 25 ]]
+      then
+        echo -e $ID,$COUNTRY,$URL,$sum >> ChangeStatus.csv
     fi
 #..............................................................................
   fi
 fi
 done <tickets.csv
+
 
