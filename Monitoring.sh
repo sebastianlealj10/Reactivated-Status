@@ -44,8 +44,6 @@ set_proxy () {
   esac
 }
 #......................................................................+
-#curl https://google.com -# -k -L -w -x,--progress-bar --insecure --write-out "\n[%{http_code}]\n[%{remote_ip}]" --proxy http://customer-analyst-cc-MX:CTAC%40cyxtera.com2018@pr.oxylabs.io:7777> test.html
-
 #...........................Create a new folder for save the HTMLS
 rm  ChangeStatus.csv > /dev/null 2>&1
 echo TicketID,Country,URL,Percentage > ChangeStatus.csv
@@ -55,11 +53,11 @@ then
 fi
 #..............................................Example of csv
 echo TicketID,Country,URL > tickets.csv
-echo -e "test2,JAPAN,http://www.mufg-jp.biz/inet/life/ninsyou/entry/top" >> tickets.csv
-echo -e "test3,COLOMBIA,https://serverfault.com" >> tickets.csv
-
-#..............................This loop is used for read the tickets csv file  curl -L https://stackoverflow.com | grep '<title>'
-
+echo -e "test1,JAPAN,http://www.mufg-jp.biz/inet/life/ninsyou/entry/top" >> tickets.csv
+echo -e "test2,COLOMBIA,https://serverfault.com" >> tickets.csv
+echo -e "test3,BRAZIL,https://home-idcb.com/CEF/" >> tickets.csv
+#.................................
+#..............................This loop is used for read the tickets line by line
 while read line
 do
 #....................................
@@ -68,15 +66,19 @@ do
   COUNTRY=`echo $line | cut -d, -f2`
   URL=`echo $line | cut -d, -f3`
 #......................................
-#.......... Verfies if the html for this ticket already exists, if it is not, creates a new html
+#.......... Verfies if the html for this ticket already exists, if it is not, creates a new HTML for each one
   if [ $ID != TicketID ]
     then
       if [ ! -f "HTMLS/$ID.html" ]
         then
             var="HTMLS/$ID.html"
+#.......Set the proxy for get the HTML
             set_proxy $COUNTRY $URL $var
+#........Read the HTTP response from the html for be used as confirmation
             resp_old=$( tail -1 "HTMLS/$ID".html | sed 's/.$//' | sed 's/^.//' )
+#..........It is the output from the cURL and says when there was a error in the loading
             echo $?
+#...........This is really important, if the load is not complete the script tryes to do it again, Oxylabs use to fail a lot...
             if [ "$?" -ne 0 ] || [ "$resp_old" -eq 000 ]
               then
                 set_proxy $COUNTRY $URL $var
@@ -85,15 +87,17 @@ do
                   then
                     set_proxy $COUNTRY $URL $var
                     resp_old=$( tail -1 "HTMLS/$ID".html | sed 's/.$//' | sed 's/^.//' )
+#............If the proxy fails two times, the script just remove this ticket and continue to the next one
                     if [ "$?" -ne 0 ] || [ "$resp_old" -eq 000 ]
                       then
                         rm "HTMLS/$ID.html"
                     fi
+#...........If the load is complete it extracts the ip and the title and it is added to the HTML code,
                   else
                     ip_old=$(dig +short $(echo $URL | awk -F[/:] '{print $4}')| head -1)
                     title_old=$(cat "HTMLS/$ID".html  | grep '<title>' | sed -n 's/.*<title>\(.*\)<\/title>.*/\1/ip;T;q')
                     echo $ip_old
-                    echo $title_old
+                    echo $401]title_old
                     echo -e "\n[$ip_old]" >> "HTMLS/$ID".html
                     echo -e "[$title_old]" >> "HTMLS/$ID".html
                 fi
@@ -108,7 +112,7 @@ do
       continue
       fi
 #......................................
-#.............................It allows compare the urls just if the html was loaded previusly
+#.............................It allows to compare the urls just if the html was loaded previusly
 if [ -f "HTMLS/$ID.html" ]
     then
 #..........................
@@ -148,10 +152,14 @@ if [ -f "HTMLS/$ID.html" ]
       echo "ip new: "$ip_new
       echo "title: "$title_new
 #................................................
-#...........................conditions for a Reactivated
+#...........................conditions for a Reactivated,
+#Variables for Reactivated
+#HTML Code
+#HTML Response
+#IP
+#Title
+#If some variable changes between old and new URL, the scripts assigns 25% to posibble Reactivated, it is necesary just 25% for alert about a reactivation
 echo "new len: "$newsite_len
-
-
     diff=$(($(sdiff -B -s -I, --ignore-matching-lines=[...] newsite.html "HTMLS/$ID".html | wc -l) - 3))
     echo "diff: "$diff
     percentage=$(echo "100 * $diff/ $newsite_len" | bc)
@@ -186,6 +194,7 @@ echo "new len: "$newsite_len
     fi
     sum=$((HTML_Code + HTML_Resp + ip + title))
     echo "add" $sum
+#.....Creates a new file with the tickets with a posibble reactivation
     if [[ $sum -gt 25 ]]
       then
         echo -e $ID,$COUNTRY,$URL,$sum >> ChangeStatus.csv
@@ -194,5 +203,3 @@ echo "new len: "$newsite_len
   fi
 fi
 done <tickets.csv
-
-
